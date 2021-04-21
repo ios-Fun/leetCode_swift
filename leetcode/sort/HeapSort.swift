@@ -9,7 +9,7 @@
 import Foundation
 
 class HeapSort {
-    // 堆排序
+    // 堆排序 -- 从小到大排序， 最大的元素在最上面，是要建立大顶堆
     func sort(_ nums:[Int]) -> [Int] {
         var numsTemp = nums
         heapSort(&numsTemp)
@@ -19,18 +19,16 @@ class HeapSort {
     // 第一步：建堆
     func heapSort(_ nums: inout [Int]) {
         
-        //1. 建立大顶堆
+        //1. 建立大顶堆 -- 一半的元素倒着遍历下滤, 时间复杂度 O(n)
         for i in stride(from: (nums.count >> 1 - 1), through: 0, by: -1)  {
             print("i:", i)
             shiftDown(arr: &nums, i: i, length: nums.count)
         }
         print(nums)
         
+        // 堆排序， 时间复杂度 O(nlogn)
         for j in stride(from: nums.count - 1, through: 1, by: -1) {
             // 2-a 栈顶是最大值，与最后一个值交换
-//            let temp = nums[0]
-//            nums[0] = nums[j]
-//            nums[j] = temp
             nums.swapAt(0, j)
             
             // 2-b 然后继续调整顶点

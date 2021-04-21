@@ -51,37 +51,37 @@ class QuickSort {
         if low >= high {
             return
         }
-        var i = low
-        var j = high
-        let key = nums[i]
-        while i < j {
-            // 先右边递减
-            while i < j {
-                if nums[j] > key {
-                    j -= 1
+        var left = low
+        var right = high
+        // 先保存
+        let key = nums[left]
+        while left < right {
+            // 先右边递减 , 找比key 小的值
+            while left < right {
+                if nums[right] > key {
+                    right -= 1
                 }else {
-                    nums[i] = nums[j]
+                    // 将 小 的值放在 left 位置
+                    nums[left] = nums[right]
                     break
                 }
             }
             
-            // 再左边递增
-            while i < j {
-                if nums[i] < key {
-                    i += 1
+            // 再左边递增， 找比 key 大的值
+            while left < right {
+                if nums[left] < key {
+                    left += 1
                 }else {
-                    nums[j] = nums[i]
+                    // 将 大 的值放在right位置
+                    nums[right] = nums[left]
                     break
                 }
             }
-            
-//            if i < j {
-//                nums.swapAt(i, j)
-//            }
         }
-        nums[i] = key
-        quickSort(&nums, low: low, high: i-1)
-        quickSort(&nums, low: i+1, high: high)
+        // 这里 left = right
+        nums[left] = key
+        quickSort(&nums, low: low, high: left-1)
+        quickSort(&nums, low: left+1, high: high)
     }
     
     // 随机快排 -- 随机一个index与最后一个交换

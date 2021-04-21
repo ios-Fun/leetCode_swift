@@ -35,6 +35,7 @@ class Solution1 {
         return []
     }
     
+    // hash
     func twoSum(_ nums: [Int], _ target: Int) -> [Int] {
         var dic:[Int: Int] = Dictionary()
         for (index,num) in nums.enumerated() {

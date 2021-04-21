@@ -8,6 +8,7 @@
 
 import Foundation
 
+// 同581
 class Solution16_16 {
     
     func subSort2(_ array: [Int]) -> [Int] {
