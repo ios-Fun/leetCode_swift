@@ -68,6 +68,7 @@ class Solution8 {
         return num
     }
     
+    // 做法不对
     func myAtoi(_ str: String) -> Int {
         let max = 0x7fffffff
         let min = 0x80000000

@@ -13,7 +13,7 @@ class Solution38 {
     
     // 正则表达式 todo
     
-    // 双指针 todo
+    // TODO: 双指针
     
     // 递归
     func countAndSay(_ n: Int) -> String {
@@ -21,7 +21,7 @@ class Solution38 {
             return "1"
         }
         let preStr = countAndSay(n-1)
-        let charList:[Character] = preStr.map{$0}
+        let charList:[Character] = Array(preStr)
         
         var count = 0
         var lastChar:Character? = nil

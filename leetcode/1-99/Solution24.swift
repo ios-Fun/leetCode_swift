@@ -15,8 +15,22 @@ class Solution24 {
     
     // 2. 采用虚拟头节点
     func swapPairs2(_ head: ListNode?) -> ListNode? {
-        // todo
-        return nil
+        // 虚拟头节点
+        let dummyHead = ListNode.init(0)
+        dummyHead.next = head
+        var pre = dummyHead
+        var cursor = dummyHead.next
+        var cursorNext = cursor?.next
+        while cursor != nil && cursorNext != nil {
+            cursor!.next = cursorNext!.next
+            cursorNext!.next = cursor!
+            pre.next = cursorNext!
+            
+            pre = cursor!
+            cursor = cursor!.next
+            cursorNext = cursor?.next
+        }
+        return dummyHead.next
     }
     
     // 1. 不采用虚拟头节点

@@ -24,6 +24,7 @@ class Solution114 {
     }
     
     // 返回尾节点
+    // TODO: 优化
     func binary(_ head: TreeNode?) -> TreeNode? {
         //print(head?.val)
         if head == nil {

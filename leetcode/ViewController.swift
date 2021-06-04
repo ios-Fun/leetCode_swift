@@ -12,11 +12,42 @@ class ViewController: UIViewController {
 
     //Solution297().test()
     
-    var label = UILabel()
-//    var count = 0
-//    var semaphoreSignal:DispatchSemaphore?
+//    let label = UILabel()
+//    var count = 10
+//    func finishTask() {
+//        print("剩下任务数量：", count)
+//        count -= 1
+//        label.text = String(format: "剩下任务: %d", count)
+//    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+//        let label = UILabel()
+//        label.textColor = .black
+//        label.text = "初始10个任务"
+//        label.frame = CGRect.init(x: 30, y: 100, width: 200, height: 50)
+//        self.view.addSubview(label)
+//        let semaphore = DispatchSemaphore(value: 3);
+//
+//        var count = 10;
+//        // let mutex = NSLock.init()
+//        for i in 0...100 {
+//            semaphore.wait()
+//            DispatchQueue.global().async {
+//                print("task start", i)
+//                // sleep(UInt32(Int.random(in: Range(1...5))))
+//                print("task end", i)
+//                // mutex.lock()
+//                count -= 1
+//
+//                DispatchQueue.main.async {
+//                    self.finishTask()
+//                }
+//                // mutex.unlock()
+//            }
+//            semaphore.signal()
+//        }
+        
         // Do any additional setup after loading the view.
 //        var dic:[Int:String] = Dictionary()
 //
@@ -31,7 +62,7 @@ class ViewController: UIViewController {
         
         
         
-        Solution93().test()
+        Solution1200().test()
         
 //        let button1 = UIButton.init(frame: CGRect.init(x: 30, y: 100, width: 200, height: 50))
 //        // button1.setBackgroundImage(UIColor.yellow, for: .normal)
@@ -93,7 +124,7 @@ class ViewController: UIViewController {
     func findnearView(_ curView: UIView, _ toView: UIView) -> (findView: UIView?, distance:Double){
         
         // 遍历
-        for subview in toView.subviews {
+        for _ in toView.subviews {
             
         }
         

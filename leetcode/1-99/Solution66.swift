@@ -30,9 +30,9 @@ class Solution66 {
                 break
             }
         }
-        if isUp {
-            digitsNew.insert(1, at: 0)
-        }
+        // 这里必然是1000..
+        digitsNew = Array.init(repeating: 0, count: digits.count+1)
+        digitsNew[0] = 1
         return digitsNew
     }
     

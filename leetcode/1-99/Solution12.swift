@@ -11,6 +11,7 @@ import Foundation
 class Solution12 {
 
     //贪心算法 todo
+    // 使用字典
     func intToRoman2(_ num: Int) -> String {
         // 一个数值数组
         // 一个单位数组
@@ -19,6 +20,7 @@ class Solution12 {
         return ""
     }
     
+    // 使用字典做些优化
     func intToRoman(_ num: Int) -> String {
         if num == 0 {
             return ""

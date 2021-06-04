@@ -11,6 +11,7 @@ import Foundation
 class Solution349 {
     // 排序 -- 双指针
     func intersection(_ nums1: [Int], _ nums2: [Int]) -> [Int] {
+        
         // nlogN
         let sortNums1 = nums1.sorted()
         let sortNums2 = nums2.sorted()

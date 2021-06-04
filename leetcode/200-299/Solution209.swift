@@ -82,8 +82,8 @@ class Solution209 {
     }
     
     func test() {
-        print(minSubArrayLen(3, [1, 1]))
-        print(minSubArrayLen(100, []))
+//        print(minSubArrayLen(3, [1, 1]))
+//        print(minSubArrayLen(100, []))
         print(minSubArrayLen(7, [2,3,1,2,4,3]))
     }
 }

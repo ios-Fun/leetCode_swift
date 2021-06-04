@@ -9,7 +9,7 @@
 import Foundation
 
 class Solution86 {
-    
+    // TODO：两个链表后合并
     func partition(_ head: ListNode?, _ x: Int) -> ListNode? {
         guard let head = head else {
             return nil

@@ -9,6 +9,8 @@
 import Foundation
 
 class Solution_o_21 {
+    
+    // 首尾双指针 -- 交换的过多--待优化
     func exchange(_ nums: [Int]) -> [Int] {
         var nums = nums
         if nums.count < 2 {
@@ -18,16 +20,22 @@ class Solution_o_21 {
         var left = 0
         var right = nums.count - 1
         while left < right {
-            if nums[left] & 1 == 0 {
-                // 偶数
-                nums.swapAt(left, right)
-                right -= 1
-            }else {
+            if nums[left] & 1 != 0 {
+                // left 为基数
                 left += 1
+                continue
             }
+            if nums[right] & 1 == 0 {
+                // right 为偶数
+                right -= 1
+                continue
+            }
+            nums.swapAt(left, right)
         }
         return nums
     }
+    
+    // TODO: 快慢指针
     
     func test() {
         print(exchange([1,2,3,4]))

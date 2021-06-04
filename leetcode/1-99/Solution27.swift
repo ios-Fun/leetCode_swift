@@ -29,20 +29,6 @@ class Solution27 {
         return nums.count - sameCount
     }
     
-    // 不能这样写
-    func removeElement2(_ nums: inout [Int], _ val: Int) -> Int {
-        if nums.count == 0{
-            return 0
-        }
-        for (index, num) in nums.enumerated().reversed() {
-            
-            if num == val {
-                //删除
-                nums.remove(at: index)
-            }
-        }
-        return nums.count
-    }
     
     func test() {
         var num1 = [3,2,2,3]

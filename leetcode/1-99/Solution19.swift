@@ -8,14 +8,13 @@
 
 import Foundation
 
-// 1. 用数组
-// 2. 用字典<位置，Node>
-// 3. 快慢指针，快指针先走N步
-// 4. 先获取长度，然后找到倒数第K个节点后删除
+// 1. 快慢指针，快指针先走N步
+// 2. 先获取长度，然后找到倒数第K个节点后删除
 class Solution19 {
     
-    //3. 快慢指针，快指针先走N步(最好的方法)
+    //1. 快慢指针，快指针先走N步(最好的方法)
     func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
+        // 虚拟头节点
         let dummyHead = ListNode.init(0)
         dummyHead.next = head
         
@@ -41,43 +40,6 @@ class Solution19 {
         slowNode?.next = slowNode?.next?.next
         
         return dummyHead.next
-    }
-    
-    func removeNthFromEnd2(_ head: ListNode?, _ n: Int) -> ListNode? {
-        if head == nil {
-            return nil
-        }
-        
-        var nodeArray:[ListNode] = Array()
-        
-        // 遍历
-        //let root = head
-        var cursor = head
-        
-        while (cursor != nil) {
-            nodeArray.append(cursor!)
-            cursor = cursor!.next
-        }
-        
-        let size = nodeArray.count
-        
-        // 删除的是头节点
-        if n == size {
-            if size > 1 {
-                return nodeArray[1]
-            }else {
-                // 长度是1
-                return nil
-            }
-        }else {
-            if n == 1 {
-                nodeArray[size-2].next = nil
-            }else {
-                nodeArray[size - n - 1].next = nodeArray[size - n + 1]
-            }
-            
-        }
-        return nodeArray[0]
     }
     
     func test() {

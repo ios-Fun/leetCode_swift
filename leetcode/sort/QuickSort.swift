@@ -63,6 +63,7 @@ class QuickSort {
                 }else {
                     // 将 小 的值放在 left 位置
                     nums[left] = nums[right]
+                    left += 1
                     break
                 }
             }
@@ -74,6 +75,7 @@ class QuickSort {
                 }else {
                     // 将 大 的值放在right位置
                     nums[right] = nums[left]
+                    right -= 1
                     break
                 }
             }
@@ -90,6 +92,6 @@ class QuickSort {
     }
     
     func test() {
-        print(sort([23, 2, 4, 1, 9, 7]))
+        print(sort([3, 2, 4, 1, 9, 7,-3, 6]))
     }
 }

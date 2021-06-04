@@ -10,7 +10,7 @@ import Foundation
 
 class Solution80 {
     
-    // 双指针思路，i是遍历的位置，j是赋值的位置
+    // 快慢指针，i是遍历的位置，j是赋值的位置
     func removeDuplicates2(_ nums: inout [Int]) -> Int {
         var count = 0
         // todo

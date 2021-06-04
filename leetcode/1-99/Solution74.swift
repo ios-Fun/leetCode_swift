@@ -11,7 +11,7 @@ import Foundation
 // 搜索二维矩阵
 // 二分查找, 先查找到对应的行，再这一行中找列
 class Solution74 {
-    // var smatrix:[[Int]]!
+    // 二分查找
     func searchMatrix(_ matrix: [[Int]], _ target: Int) -> Bool {
         // smatrix = matrix
         let n = matrix.count

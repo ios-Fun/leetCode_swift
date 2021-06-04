@@ -10,6 +10,7 @@ import Foundation
 
 class Solution116 {
     // 1. 递归
+    // TODO: 优化
     func connect(_ root: Node?) -> Node? {
         root?.next = nil
         dfs(root?.left, root?.right)

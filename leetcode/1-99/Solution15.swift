@@ -13,11 +13,47 @@ import Foundation
 //
 class Solution15 {
     
+    func quickSort(_ num: inout [Int], _ begin: Int, _ end: Int) {
+        if begin >= end {
+            return
+        }
+        let key = num[begin]
+        var i = begin
+        var j = end
+        while (i < j) {
+            while (i < j) {
+                if (num[j] > key) {
+                    j -= 1
+                }else {
+                    num[i] = num[j]
+                    break
+                }
+            }
+            while(i < j) {
+                if num[i] < key {
+                    i += 1
+                }else {
+                    num[j] = num[i]
+                }
+            }
+        }
+        num[i] = key
+        i += 1
+        quickSort(&num, begin, i)
+        quickSort(&num, j, end)
+    }
+    
     // for + 双指针
     func threeSum(_ numa: [Int]) -> [[Int]] {
-        let sortNum = numa.sorted { (a, b) -> Bool in
-            return a <= b
-        }
+        // numa.sor
+//        let sortNum = numa.sorted { (a, b) -> Bool in
+//            return a <= b
+//        }
+        
+        var sortNum = numa;
+        // 快速排序
+        quickSort(&sortNum, 0 ,sortNum.count-1)
+        
         var resultArray:[[Int]]  = Array()
         for i in 0..<sortNum.count {
             

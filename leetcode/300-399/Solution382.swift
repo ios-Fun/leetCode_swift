@@ -28,8 +28,9 @@ class Solution382 {
         var returnValue = 1
         while cursor != nil {
             count = count + 1
+            // 随机到0 表示选中
             if 0 == Int.random(in: Range(0...(count-1))) {
-                // current = count
+                // 选中了，选择该值
                 returnValue = cursor!.val
             }
             
