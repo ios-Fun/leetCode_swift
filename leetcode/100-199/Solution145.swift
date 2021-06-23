@@ -11,6 +11,39 @@ import Foundation
 // 1. 遍历 --- 栈 和 记录上一个pop的节点
 // 2. 递归
 class Solution145 {
+    
+    // 迭代--后续遍历完善
+    func postorderTraversal2(_ root: TreeNode?) -> [Int] {
+        if root == nil {
+            return []
+        }
+        var result:[Int] = Array()
+        var stack:[TreeNode] = Array()
+        
+        var prev:TreeNode?
+        var curNode = root
+        while curNode != nil || !stack.isEmpty {
+            while curNode != nil {
+                // 入栈
+                stack.append(curNode!)
+                curNode = curNode?.left
+            }
+            // 出栈
+            curNode = stack.last!
+            if curNode!.right == nil || curNode!.right === prev {
+                // right 没有 ｜｜ rigth已经遍历过了
+                result.append(curNode!.val)
+                prev = curNode
+                curNode = nil
+            }else {
+                stack.append(curNode!.right!)
+                curNode = curNode!.right
+            }
+        }
+        return result
+    }
+    
+    // 迭代--后续遍历
     func postorderTraversal(_ root: TreeNode?) -> [Int] {
         if root == nil {
             return []

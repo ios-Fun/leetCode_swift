@@ -16,7 +16,7 @@ public class ListNode {
          self.next = nil
      }
     
-    deinit {
-        print("remove:", val)
-    }
+//    deinit {
+//        print("remove:", val)
+//    }
 }

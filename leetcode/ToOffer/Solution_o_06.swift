@@ -12,12 +12,30 @@ class Solution_o_06 {
     
     // todo 递归 回溯法
     func reversePrint(_ head: ListNode?) -> [Int] {
-        
-        return [];
+        if head == nil {
+            return []
+        }
+        var result:[Int] = reversePrint(head!.next)
+        result.append(head!.val)
+        return result
+    }
+    
+    func reversePrint2(_ head: ListNode?) -> [Int] {
+        var list:[Int] = []
+        var curNode = head
+        while curNode != nil {
+            list.insert(curNode!.val, at: 0)
+            curNode = curNode!.next
+        }
+        return list;
     }
     
     func test() {
-        let root = ListNode(1);
-        print(reversePrint(root))
+        let node1 = ListNode(1);
+        let node2 = ListNode(3);
+        let node3 = ListNode(2);
+        node1.next = node2
+        node2.next = node3
+        print(reversePrint(node1))
     }
 }

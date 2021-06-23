@@ -48,18 +48,19 @@ class Solution94 {
         return result
     }
     
-    // 栈--遍历
+    // 迭代--中序遍历
     func inorderTraversal2(_ root: TreeNode?) -> [Int] {
         var result:[Int] = Array()
         var stack:[TreeNode] = Array()
         var curr:TreeNode? = root
         
-        while curr != nil || stack.count > 0 {
+        while curr != nil || !stack.isEmpty {
             // 先把左边的全加进来
             while curr != nil {
                 stack.append(curr!)
                 curr = curr!.left
             }
+            // pop 栈顶元素
             curr = stack.last!
             stack.removeLast()
             result.append(curr!.val)
@@ -68,7 +69,7 @@ class Solution94 {
         return result
     }
     
-    //递归
+    //迭代
     func inorderTraversal3(_ root: TreeNode?) -> [Int] {
         var stack:[TreeNode] = Array()
         var resultList:[Int] = Array()

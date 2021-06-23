@@ -78,7 +78,7 @@ class Solution46 {
     }
     
     func test() {
-        print(permute2([1,2,3]))
+        print(permute([1,2,3]))
     }
 }
 
