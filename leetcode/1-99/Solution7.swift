@@ -40,7 +40,7 @@ class Solution7 {
         
     }
     
-    // Int32
+    // Int32---不符合要求
     func reverse(_ x: Int) -> Int {
 //        let max = 0x7fffffff
 //        let min = 0x80000000

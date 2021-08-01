@@ -10,7 +10,7 @@ import Foundation
 
 
 // / 10 后比较， 同 7 
-
+// 需要考虑正负符号、数字和字母、数字的溢出
 class Solution8 {
     
     // 除10后比较

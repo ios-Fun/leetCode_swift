@@ -32,7 +32,7 @@ class Solution34 {
         var left = 0
         var right = nums.count
         while(left < right) {
-            let mid = (left + right)/2
+            let mid = (left + right) >> 1
             if nums[mid] > target || (isLeft && target == nums[mid]){
                 right = mid
                 continue

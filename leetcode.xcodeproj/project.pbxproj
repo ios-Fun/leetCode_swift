@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC5AE8B3268F35EB00A00AE3 /* ArrayTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5AE8B2268F35EB00A00AE3 /* ArrayTest.swift */; };
+		CC6EEF4226B519BF00CAC64F /* GetMaxLength.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC6EEF4126B519BF00CAC64F /* GetMaxLength.swift */; };
 		D70DB923267F102100BB1A9D /* TestNum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D70DB922267F102100BB1A9D /* TestNum.swift */; };
 		D712B27D242A2A25002986BE /* Solution160.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712B27C242A2A25002986BE /* Solution160.swift */; };
 		D712B27F242A4B2F002986BE /* Solution166.swift in Sources */ = {isa = PBXBuildFile; fileRef = D712B27E242A4B2F002986BE /* Solution166.swift */; };
@@ -397,6 +399,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CC5AE8B2268F35EB00A00AE3 /* ArrayTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTest.swift; sourceTree = "<group>"; };
+		CC6EEF4126B519BF00CAC64F /* GetMaxLength.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMaxLength.swift; sourceTree = "<group>"; };
 		D70DB922267F102100BB1A9D /* TestNum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNum.swift; sourceTree = "<group>"; };
 		D712B27C242A2A25002986BE /* Solution160.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution160.swift; sourceTree = "<group>"; };
 		D712B27E242A4B2F002986BE /* Solution166.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Solution166.swift; sourceTree = "<group>"; };
@@ -1430,6 +1434,8 @@
 				D7396464264D357E008D9CC7 /* SemaphoreTest.swift */,
 				D70DB922267F102100BB1A9D /* TestNum.swift */,
 				D7D2C430268199B000A43D34 /* DfsTest.swift */,
+				CC5AE8B2268F35EB00A00AE3 /* ArrayTest.swift */,
+				CC6EEF4126B519BF00CAC64F /* GetMaxLength.swift */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -1690,6 +1696,7 @@
 				D720C825247BAF2A0061AD15 /* Solution581.swift in Sources */,
 				D79725DA2574F0C1002DF4B5 /* Solution16_11.swift in Sources */,
 				D72990BE24BAE31C006224DE /* Solution86.swift in Sources */,
+				CC6EEF4226B519BF00CAC64F /* GetMaxLength.swift in Sources */,
 				D77C66A024A8677F008C8508 /* Solution393.swift in Sources */,
 				D77E316F2447FD4B00F439E5 /* Solution263.swift in Sources */,
 				D7EB6F6A2436E3EC00F725F0 /* Solution153.swift in Sources */,
@@ -1843,6 +1850,7 @@
 				D74555ED259B2D900012B03B /* Solution295.swift in Sources */,
 				D72BBC2724A227530074C521 /* Solution380.swift in Sources */,
 				D7D75C1224E696C4000C7700 /* Solution16_16.swift in Sources */,
+				CC5AE8B3268F35EB00A00AE3 /* ArrayTest.swift in Sources */,
 				D77B965C2419D62300314964 /* AppDelegate.swift in Sources */,
 				D7F9CF4724348E8400572FDC /* Solution28.swift in Sources */,
 				D74555D425957F480012B03B /* Solution117.swift in Sources */,

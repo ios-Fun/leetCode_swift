@@ -21,6 +21,7 @@ class Solution15 {
         var i = begin
         var j = end
         while (i < j) {
+            // 先右边的递减
             while (i < j) {
                 if (num[j] > key) {
                     j -= 1
@@ -29,11 +30,13 @@ class Solution15 {
                     break
                 }
             }
+            // 在左边的递增
             while(i < j) {
                 if num[i] < key {
                     i += 1
                 }else {
                     num[j] = num[i]
+                    break
                 }
             }
         }

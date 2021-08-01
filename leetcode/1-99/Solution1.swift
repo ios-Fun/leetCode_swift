@@ -11,6 +11,7 @@ import Foundation
 
 //1. 暴力法
 //2. 使用字典，O(n), 空间换时间
+//3. 排序后，左右指针
 class Solution1 {
     
     // 暴力法

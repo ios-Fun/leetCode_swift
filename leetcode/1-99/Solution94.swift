@@ -90,6 +90,30 @@ class Solution94 {
         return resultList
     }
     
+    // 迭代4 -- 思路最清晰
+    func inorderTraversal4(_ root: TreeNode?) -> [Int] {
+        var stack:[TreeNode] = Array()
+        var resultList:[Int] = Array()
+        
+        var node :TreeNode? = root
+        while(true) {
+            if node != nil {
+                // 将左全部入栈
+                stack.append(node!)
+                node = node!.left
+            }else if stack.isEmpty{
+                break
+            }else {
+                // 左边为nil了， 访问右边
+                node = stack.removeLast()
+                resultList.append(node!.val)
+                node = node!.right
+            }
+        }
+        
+        return resultList
+    }
+    
     // 递归
     func binary(_ node: TreeNode?, _ list: inout [Int]) {
         
@@ -129,6 +153,8 @@ class Solution94 {
         t_3.left = t_1
         t_1.right = t_2
         print(inorderTraversal(t_3))
+        
+        print(inorderTraversal4(t_3))
     }
 }
 

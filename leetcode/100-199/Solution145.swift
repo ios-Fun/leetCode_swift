@@ -12,6 +12,43 @@ import Foundation
 // 2. 递归
 class Solution145 {
     
+    // 迭代-- 后序遍历 -- 思路最清晰
+    func postorderTraversal3(_ root: TreeNode?) -> [Int] {
+        var result:[Int] = Array()
+        var stack:[TreeNode] = Array()
+        
+        
+        if root == nil {
+            return []
+        }
+        
+        // 先将根节点入栈
+        stack.append(root!)
+        
+        // var node = root
+        var preNode:TreeNode? = nil
+        
+        while !stack.isEmpty {
+            
+            let top = stack.last!
+            if (top.left == nil && top.right == nil) || (preNode != nil &&  (top.left === preNode || top.right === preNode)) {
+                // 是叶子结点 || 子节点刚弹出过
+                let popNode = stack.removeLast()
+                preNode = popNode
+                result.append(popNode.val)
+            }else {
+                if top.right != nil {
+                    stack.append(top.right!)
+                }
+                if top.left != nil {
+                    stack.append(top.left!)
+                }
+            }
+        }
+        
+        return result
+    }
+    
     // 迭代--后续遍历完善
     func postorderTraversal2(_ root: TreeNode?) -> [Int] {
         if root == nil {
@@ -100,5 +137,7 @@ class Solution145 {
         node4.left = node7
         node4.right = node8
         print(postorderTraversal(root))
+        
+        print(postorderTraversal3(root))
     }
 }
