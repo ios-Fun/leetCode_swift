@@ -80,6 +80,7 @@ class Solution200 {
         self.n = n
         var count = 0
         var isVisited:[[Int]] = Array()
+        // = 1, 表示未访问过，访问过之后，置为0
         for _ in (0..<n) {
             isVisited.append([Int].init(repeating: 1, count: m))
         }

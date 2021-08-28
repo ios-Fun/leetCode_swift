@@ -8,9 +8,16 @@
 
 import Foundation
 
+extension Int {
+    public var hashValue: Int {
+        return 0
+    }
+}
+
 class GetMaxLength {
     // 采用for循环
     func maxLengthBetweenEqualCharacters(s: String) -> Int {
+        
         let charArray = Array(s)
         var maxLength = -1
         for i in 0..<charArray.count {
@@ -32,8 +39,9 @@ class GetMaxLength {
     }
     
     func test() {
-        print(maxLengthBetweenEqualCharacters(s: "cc"))
-        print(maxLengthBetweenEqualCharacters(s: "fwejfldskjf"))
-        print(maxLengthBetweenEqualCharacters(s: "dskj"))
+        
+//        print(maxLengthBetweenEqualCharacters(s: "cc"))
+//        print(maxLengthBetweenEqualCharacters(s: "fwejfldskjf"))
+//        print(maxLengthBetweenEqualCharacters(s: "dskj"))
     }
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 
+// 双指针写法
 class Solution485 {
     func findMaxConsecutiveOnes(_ nums: [Int]) -> Int {
         return 0

@@ -62,7 +62,7 @@ class ViewController: UIViewController {
         
         
         
-        GetMaxLength().test()
+        Solution567().test()
         
 //        let button1 = UIButton.init(frame: CGRect.init(x: 30, y: 100, width: 200, height: 50))
 //        // button1.setBackgroundImage(UIColor.yellow, for: .normal)
