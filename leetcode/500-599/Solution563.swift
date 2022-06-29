@@ -10,18 +10,20 @@ import Foundation
 
 class Solution563 {
     func findTilt(_ root: TreeNode?) -> Int {
-        // return findTiltValues(root).sub
-        return 0
+        let value = findTiltValues(root)
+        return value.sum
     }
     
-//    func findTiltValues(_ root: TreeNode?) -> (sub: Int, add: Int) {
-//        guard let root = root else {
-//            return (sub:0, add: 0)
-//        }
-//        let leftValues = findTiltValues(root.left)
-//        let rightValues = findTiltValues(root.right)
-//        return (sub: abs(leftValues.sub - rightValues.sub), add: leftValues.add + rightValues.add)
-//    }
+    // sub: 坡度， add: 总和： sum: 坡度和
+    //
+    func findTiltValues(_ root: TreeNode?) -> (sub: Int, add: Int, sum: Int) {
+        guard let root = root else {
+            return (sub:0, add:0, sum: 0)
+        }
+        let leftValues = findTiltValues(root.left)
+        let rightValues = findTiltValues(root.right)
+        return (sub: abs(leftValues.add - rightValues.add), add: leftValues.add + rightValues.add + root.val, sum: leftValues.sum + rightValues.sum + abs(leftValues.add - rightValues.add))
+    }
     
     func test() {
         let nodea1 = TreeNode.init(1)
@@ -43,5 +45,7 @@ class Solution563 {
         nodeb2.right = nodeb5
         nodeb3.right = nodeb6
         print(findTilt(nodeb1))
+        
+        // [4,2,9,3,5,null,7] -> 15
     }
 }

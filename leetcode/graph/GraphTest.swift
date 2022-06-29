@@ -185,7 +185,6 @@ public class GraphTest {
     func prim() -> (cost: Int, tree: GraphTest){
         var cost: Int = 0
         let tree = GraphTest(edges: [], nodes: [])
-        // guard let start =
         guard nodes.count > 0 else {
             return (0, tree)
         }
@@ -241,5 +240,9 @@ public class GraphTest {
         }
         
         return (cost: cost, tree: tree)
+    }
+    
+    func test() {
+        
     }
 }
