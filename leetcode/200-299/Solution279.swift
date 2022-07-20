@@ -11,9 +11,17 @@ import Foundation
 // 1. 动态规划？
 // 2. 深度遍历？
 class Solution279 {
+    // 动态规划
     func numSquares(_ n: Int) -> Int {
-        
-        return 1
+        var dp:[Int] = Array.init(repeating: Int.max, count: n+1)
+        dp[0] = 0
+        for i in 1...n {
+            let toValue: Int = Int(sqrt(Double(i)))
+            for j in 1...toValue {
+                dp[i] = min(dp[i - j*j] + 1, dp[i])
+            }
+        }
+        return dp.last!
     }
     
     let MAX_HWM = 0x800000;
@@ -43,13 +51,15 @@ class Solution279 {
     }
     
     func test() {
-//        print(numSquares(12))
-//        print(numSquares(13))
+        print(numSquares(12))
+        print(numSquares(13))
         
-        print(roundUpToNextPowerOfTwo(1000))
-        print(roundUpToNextPowerOfTwo(600))
+//        print(roundUpToNextPowerOfTwo(1000))
+//        print(roundUpToNextPowerOfTwo(600))
     }
 }
+
+// 1 2，3，4
 
 
 // a, b

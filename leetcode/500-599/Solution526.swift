@@ -7,7 +7,8 @@
 //
 
 import Foundation
-
+//1. 回溯
+//2. 动态规划
 class Solution526 {
     func countArrangement(_ n: Int) -> Int {
         return 0
@@ -26,3 +27,16 @@ class Solution526 {
 // 1 -> 1
 // 2 -> [1, 2] ,[2, 1]
 // 3 -> []
+
+//   1 2
+//1  1 2
+//2  2 1
+
+//   1  2  3
+//   1  2  3 ok
+//   1  3  1
+//   2  1  3 ok
+//   2  3  1
+//   3  1  2
+//   3  2  1
+
